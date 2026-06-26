@@ -3,7 +3,7 @@
   "builds": [
     {
       "src": "api/call-intelligence.js",
-      "use": "@vercel/node@3.0.0"
+      "use": "@vercel/node@4.x"
     }
   ],
   "routes": [
