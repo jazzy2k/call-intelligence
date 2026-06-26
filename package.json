@@ -2,6 +2,9 @@
   "name": "call-intelligence",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "@vercel/node": "3.0.0"
   }
