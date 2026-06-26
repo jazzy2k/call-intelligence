@@ -28,7 +28,8 @@ module.exports = async function handler(req, res) {
       rep_name,
     } = req.body;
 
-    console.log("GHL Webhook received:", { contact_id, contact_name, call_duration, call_direction, call_from, call_to });
+  console.log("FULL RAW BODY:", JSON.stringify(req.body, null, 2));
+console.log("GHL Webhook received:", { contact_id, contact_name, call_duration, call_direction, call_from, call_to });
 
     if (parseInt(call_duration) < 10) {
       console.log("Call too short - logging as No Answer");
