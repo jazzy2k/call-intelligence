@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/call-intelligence.js",
+      "use": "@vercel/node@3.0.0"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/call-intelligence",
+      "dest": "/api/call-intelligence.js"
+    }
+  ]
+}
