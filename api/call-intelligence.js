@@ -183,9 +183,14 @@ module.exports = async function handler(req, res) {
       });
       var claudeData = await claudeRes.json();
       var rawText = claudeData.content && claudeData.content[0] && claudeData.content[0].text;
-      if (rawText) {
-        analysis = JSON.parse(rawText.trim());
-      }
+     if (rawText) {
+  var cleaned = rawText.trim()
+    .replace(/^```json\s*/i, "")
+    .replace(/^```\s*/i, "")
+    .replace(/```\s*$/i, "")
+    .trim();
+  analysis = JSON.parse(cleaned);
+}
     } catch (e) {
       console.log("Claude error:", e.message);
     }
