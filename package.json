@@ -6,6 +6,6 @@
     "node": "20.x"
   },
   "dependencies": {
-    "@vercel/node": "3.0.0"
+    "@vercel/node": "4.x"
   }
 }
